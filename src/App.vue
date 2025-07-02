@@ -35,7 +35,11 @@ const aatroxBan: Champion = {
   </div>
 
   <div id="champSelect">
-
+    <div class="teamsInfos">
+      <p id="teamA">Team A</p>
+      <p id="timer">30</p>
+      <p id="teamB">Team B</p>
+    </div>
   </div>
 
   <div class="side">
@@ -66,13 +70,16 @@ const aatroxBan: Champion = {
 
 #champSelect {
   width: 60vw;
+  display: flex;
+  flex-direction: column;
+  padding: 0 32px;
 }
 
 .picks {
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  height: 85vh;
 }
 
 .bans {
@@ -80,5 +87,29 @@ const aatroxBan: Champion = {
   align-items: center;
   gap: 16px;
   height: 15vh;
+}
+
+.teamsInfos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  font-weight: 600;
+
+  p {
+    margin: 0;
+  }
+}
+
+#teamA {
+  color: var(--color-blue-side);
+}
+
+#teamB {
+  color: var(--color-red-side);
+}
+
+#timer {
+  color: var(--font-color-white);
 }
 </style>
