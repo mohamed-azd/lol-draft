@@ -30,7 +30,7 @@ const sideClass = computed(() => props.isBlueSide ? 'pick-slot-blue' : 'pick-slo
 .pick-slot {
   width: 100%;
   height: 100%;
-  background-color: #2d2d2d;
+  background-color: var(--color-surface);
   border-radius: 4px;
   box-shadow: var(--box-shadow);
   transition: height 0.5s ease;

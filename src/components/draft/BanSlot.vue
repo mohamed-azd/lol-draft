@@ -2,6 +2,7 @@
 import type {Champion} from "@/types.ts";
 import {computed} from "vue";
 import cross from '@/assets/croix.png';
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 const ddragonUrl = "https://ddragon.leagueoflegends.com/cdn/15.13.1/img/champion/";
 
@@ -30,7 +31,7 @@ const sideClass = computed(() => props.isBlueSide ? 'ban-slot-blue' : 'ban-slot-
   width: 100%;
   height: fit-content;
   aspect-ratio: 1 / 1;
-  background-color: #2d2d2d;
+  background-color: var(--color-surface);
   border-radius: 4px;
   box-shadow: var(--box-shadow);
 }

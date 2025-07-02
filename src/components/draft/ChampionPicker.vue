@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import RolesTabs from "@/components/draft/RolesTabs.vue";
+import SearchChampion from "@/components/draft/SearchChampion.vue";
 </script>
 
 <template>
   <div id="championPicker">
     <div id="filterBar">
       <RolesTabs class="tabs" />
-      <p>aaaa</p>
+      <SearchChampion />
     </div>
   </div>
 </template>
@@ -18,7 +19,7 @@ import RolesTabs from "@/components/draft/RolesTabs.vue";
 }
 
 .tabs {
-  width: 15vw;
+  width: 17vw;
 }
 
 #filterBar {

@@ -46,20 +46,23 @@ const value = ref('all')
   display: flex;
   flex-direction: row;
   overflow: visible;
-  gap: 8px;
+  gap: 16px;
   box-shadow: var(--box-shadow);
   border-radius: 4px;
+  background: var(--color-surface);
+  padding: 0px 8px
 }
 
 [data-scope='tabs'][data-part='trigger'] {
   position: relative;
   margin: 0;
   border: 0;
+  border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
   transition: border-color 300ms ease;
   box-shadow: none;
   border-radius: 4px;
-  background: transparent;
+  background: var(--color-surface);
   cursor: pointer;
 }
 
