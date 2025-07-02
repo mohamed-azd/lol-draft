@@ -2,6 +2,7 @@
 import PickSlot from "./components/draft/PickSlot.vue";
 import type {Champion} from "@/types.ts";
 import BanSlot from "@/components/draft/BanSlot.vue";
+import ChampionPicker from "@/components/draft/ChampionPicker.vue";
 
 const aatroxSplash: Champion = {
   name: "Aatrox",
@@ -40,6 +41,8 @@ const aatroxBan: Champion = {
       <p id="timer">30</p>
       <p id="teamB">Team B</p>
     </div>
+
+    <ChampionPicker />
   </div>
 
   <div class="side">
