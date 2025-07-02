@@ -1,25 +1,36 @@
 <script setup lang="ts">
 import PickSlot from "./components/draft/PickSlot.vue";
 import type {Champion} from "@/types.ts";
+import BanSlot from "@/components/draft/BanSlot.vue";
 
-const aatrox: Champion = {
+const aatroxSplash: Champion = {
   name: "Aatrox",
   role: "TOP",
   img: "Aatrox_0.jpg"
+}
+
+const aatroxBan: Champion = {
+  name: "Aatrox",
+  role: "TOP",
+  img: "Aatrox.png"
 }
 </script>
 
 <template>
   <div class="side">
     <div class="picks">
-      <PickSlot :champion="aatrox" :is-blue-side="true" />
-      <PickSlot :is-blue-side="true" />
-      <PickSlot :is-blue-side="true" />
-      <PickSlot :is-blue-side="true" />
-      <PickSlot :is-blue-side="true" />
+      <PickSlot :champion="aatroxSplash" :is-blue-side="true"/>
+      <PickSlot :is-blue-side="true"/>
+      <PickSlot :is-blue-side="true"/>
+      <PickSlot :is-blue-side="true"/>
+      <PickSlot :is-blue-side="true"/>
     </div>
     <div class="bans">
-
+      <BanSlot :is-blue-side="true"/>
+      <BanSlot :is-blue-side="true"/>
+      <BanSlot :is-blue-side="true"/>
+      <BanSlot :is-blue-side="true"/>
+      <BanSlot :is-blue-side="true"/>
     </div>
   </div>
 
@@ -29,14 +40,18 @@ const aatrox: Champion = {
 
   <div class="side">
     <div class="picks">
-      <PickSlot :is-blue-side="false" />
-      <PickSlot :is-blue-side="false" />
-      <PickSlot :is-blue-side="false" />
-      <PickSlot :is-blue-side="false" />
-      <PickSlot :is-blue-side="false" />
+      <PickSlot :is-blue-side="false"/>
+      <PickSlot :is-blue-side="false"/>
+      <PickSlot :is-blue-side="false"/>
+      <PickSlot :is-blue-side="false"/>
+      <PickSlot :is-blue-side="false"/>
     </div>
     <div class="bans">
-
+      <BanSlot :champion="aatroxBan" :is-blue-side="false"/>
+      <BanSlot :is-blue-side="false"/>
+      <BanSlot :is-blue-side="false"/>
+      <BanSlot :is-blue-side="false"/>
+      <BanSlot :is-blue-side="false"/>
     </div>
   </div>
 </template>
@@ -61,6 +76,9 @@ const aatrox: Champion = {
 }
 
 .bans {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   height: 15vh;
 }
 </style>
