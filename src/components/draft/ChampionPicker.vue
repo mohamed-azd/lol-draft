@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import RolesTabs from "@/components/draft/RolesTabs.vue";
 import SearchChampion from "@/components/draft/SearchChampion.vue";
+import ChampionCard from "@/components/draft/ChampionCard.vue";
+import type {Champion} from "@/types.ts";
+
+const aatrox: Champion = {
+  name: "Aatrox",
+  role: "TOP",
+  img: "Aatrox.png"
+}
 </script>
 
 <template>
@@ -9,6 +17,64 @@ import SearchChampion from "@/components/draft/SearchChampion.vue";
       <RolesTabs class="tabs" />
       <SearchChampion />
     </div>
+    <div id="champions">
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+      <ChampionCard :champion="aatrox" />
+    </div>
+
+    <
   </div>
 </template>
 
@@ -27,5 +93,33 @@ import SearchChampion from "@/components/draft/SearchChampion.vue";
   align-items: center;
   justify-content: space-between;
   height: 10%;
+}
+
+#champions {
+  height: 65vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  overflow-y: auto;
+  max-height: 65vh;
+  max-width: 100%;
+  padding: 8px 8px;
+}
+
+#champions::-webkit-scrollbar {
+  width: 8px;
+}
+
+#champions::-webkit-scrollbar-track {
+  background: var(--color-surface);
+  border-radius: 8px;
+}
+
+#champions::-webkit-scrollbar-thumb {
+  background-color: var(--font-color-white);
+  border-radius: 8px;
+  border: 2px solid var(--color-surface)
 }
 </style>

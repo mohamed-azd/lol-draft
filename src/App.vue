@@ -75,7 +75,7 @@ const aatroxBan: Champion = {
   width: 60vw;
   display: flex;
   flex-direction: column;
-  padding: 0 32px;
+  padding: 0 56px;
 }
 
 .picks {
@@ -101,6 +101,7 @@ const aatroxBan: Champion = {
 
   p {
     margin: 0;
+    text-shadow: var(--text-shadow);
   }
 }
 

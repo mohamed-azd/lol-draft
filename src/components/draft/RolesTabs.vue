@@ -61,7 +61,6 @@ const value = ref('all')
   border-bottom: 4px solid transparent;
   transition: border-color 300ms ease;
   box-shadow: none;
-  border-radius: 4px;
   background: var(--color-surface);
   cursor: pointer;
 }
@@ -79,6 +78,5 @@ const value = ref('all')
 
 .roleIcon {
   width: 100%;
-  height: fit-content;
 }
 </style>
