@@ -3,6 +3,7 @@ import PickSlot from "./components/draft/PickSlot.vue";
 import type {Champion} from "@/types.ts";
 import BanSlot from "@/components/draft/BanSlot.vue";
 import ChampionPicker from "@/components/draft/ChampionPicker.vue";
+import ValidateButton from "@/components/draft/ValidateButton.vue";
 
 const aatroxSplash: Champion = {
   name: "Aatrox",
@@ -43,6 +44,9 @@ const aatroxBan: Champion = {
     </div>
 
     <ChampionPicker />
+    <div class="btnContainer">
+      <ValidateButton />
+    </div>
   </div>
 
   <div class="side">
@@ -54,7 +58,7 @@ const aatroxBan: Champion = {
       <PickSlot :is-blue-side="false"/>
     </div>
     <div class="bans">
-      <BanSlot :champion="aatroxBan" :is-blue-side="false"/>
+      <BanSlot :is-blue-side="false"/>
       <BanSlot :is-blue-side="false"/>
       <BanSlot :is-blue-side="false"/>
       <BanSlot :is-blue-side="false"/>
@@ -75,7 +79,16 @@ const aatroxBan: Champion = {
   width: 60vw;
   display: flex;
   flex-direction: column;
+  gap: 8px;
   padding: 0 56px;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .picks {
